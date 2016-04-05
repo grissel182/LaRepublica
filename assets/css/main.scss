@@ -1,3 +1,90 @@
-nav{
-	font-size: 10px;
+@import "estilosGriss/_variables";
+@import "estilosGriss/_mixins";
+
+.cien{
+	width: 100%;
+}
+
+#menu-principal{
+	.navbar{
+		font-size: 12px;
+		min-height: 40px;
+	}
+	.nav{
+		li a{
+			padding: 10px 12px;
+			margin-bottom: -10px;
+			border-right: 1px solid #890505;
+			&:not(:last-child){
+				border-right:none;
+			}
+		}
+	}
+	.navbar-inverse{
+		padding-bottom: 0px;
+		background-image: linear-gradient(to bottom, #E70505 0%, $red 100%);
+		.active a{
+			background-color: #910606 !important;
+			background-image: none;
+		}
+		.dropdown-menu{
+			background-image: linear-gradient(to bottom, #E70505 0%, $red 100%);
+			font-size: 12px;
+			li a{
+				color: white;
+				&:hover{
+					background-color:#E70505 !important;
+				}
+			}
+			.divider{
+				background-color: #680303;
+			}
+		}
+		.navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+			background-color: $dark-red !important;
+		}
+		.dropdown-menu li a:hover {
+	    	background-color: $dark-red !important;
+	    	background-image: none;
+		}
+		.dropdown{
+			&:hover, &:focus, &:active, &:visited{
+				background-color: $dark-red !important;
+			}
+
+		}
+	}
+}
+/*segundo menu*/
+.navbar-brand{
+	background-color: black !important;;
+	color: white !important;
+}
+.menu2	{
+	li{
+		width: 10%;
+	}
+}
+#encabezado{
+	h1{
+		font-size: 4.5em;
+		font-weight: 800;
+		color: black;
+		line-height: 1;
+	}
+	.jne{
+		@include principal (100%, auto);
+	}
+	.martin{
+		@include principal (100%, auto);
+	}
+	.sub{
+		@include principal (100%, auto);
+	}
+	.mt-2{
+		margin-top: 2%;
+	}
+}
+#columnistas{
+	@include grisybtn ($gris, $dark-red, $dark-red);
 }

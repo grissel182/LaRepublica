@@ -1,0 +1,36 @@
+@import "../estilosGriss/_variables";
+
+@mixin principal ($width, $height){
+	width: $width;
+	height: $height;
+	h2{
+		color: white;
+		text-shadow:2px 2px 2px #030000;		
+	}
+	.shadow{
+		position: absolute;
+		bottom: 0;
+		left: 10px;
+		margin:0 16px 0 5px;
+		padding: 140px 10px 0px;
+		-webkit-box-shadow: inset 1px -109px 77px -29px rgba(0,0,0,0.77);
+		-moz-box-shadow: inset 1px -109px 77px -29px rgba(0,0,0,0.77);
+		box-shadow: inset 1px -109px 77px -29px rgba(0,0,0,0.77);
+	}
+	img{
+		z-index: -11111;
+	}
+}
+@mixin grisybtn($color, $borde, $btn){
+	width: 100%;
+	background-color: $color;
+	border-top: 4px solid $borde;
+	.btn{
+		border-radius: 0px !important;
+		margin-top: -20px;
+	}
+	.btn-danger{
+		background-color: $btn !important;
+		background-image: none !important;
+	}
+}
